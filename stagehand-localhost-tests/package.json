@@ -1,0 +1,30 @@
+{
+  "name": "stagehand-localhost-tests",
+  "version": "1.0.0",
+  "description": "Proyecto para ejecutar tests de Stagehand en localhost",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node dist/tests/run-all.js",
+    "test:single": "npm run build && node",
+    "dev": "ts-node src/tests/run-all.ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "stagehand",
+    "automation",
+    "testing",
+    "localhost"
+  ],
+  "author": "Ferry",
+  "license": "MIT",
+  "dependencies": {
+    "@browserbasehq/stagehand": "^1.8.5",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
